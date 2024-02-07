@@ -133,7 +133,7 @@ Connections from other bundles that this bundle depends on.
       ```
 
   - **`specs`** *(object)*
-- **`azure_storage_account_data_lake`** *(object)*: . Cannot contain additional properties.
+- **`azure_storage_account_blob`** *(object)*: . Cannot contain additional properties.
   - **`data`** *(object)*
     - **`infrastructure`** *(object)*
       - **`ari`** *(string)*: Azure Resource ID.

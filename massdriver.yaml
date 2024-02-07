@@ -1,7 +1,7 @@
 schema: draft-07
-name: "azure-event-hubs"
+name: "azure-event-hubs-blob"
 description: "Event Hubs is a modern big data streaming platform and event ingestion service that can seamlessly integrate with other Azure and Microsoft services. The service can process millions of events per second with low latency. The data sent to an event hub (Event Hubs instance) can be transformed and stored by using any real-time analytics providers or batching or storage adapters."
-source_url: github.com/massdriver-cloud/azure-event-hubs
+source_url: github.com/suind/azure-event-hubs
 access: public
 type: infrastructure
 
@@ -278,19 +278,19 @@ params:
 connections:
   required:
   - azure_service_principal
-  - azure_storage_account_data_lake
+  - azure_storage_account_blob
   properties:
     azure_service_principal:
       $ref: massdriver/azure-service-principal
-    azure_storage_account_data_lake:
-      $ref: massdriver/azure-storage-account-data-lake
+    azure_storage_account_blob:
+      $ref: massdriver/azure-storage-account-blob
 
 artifacts:
   required:
     - azure_event_hubs
   properties:
     azure_event_hubs:
-      $ref: massdriver/azure-event-hubs
+      $ref: suind/azure-event-hubs-connection-string
 
 ui:
   ui:order:

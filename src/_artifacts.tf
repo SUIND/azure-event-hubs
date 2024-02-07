@@ -8,6 +8,7 @@ resource "massdriver_artifact" "azure_event_hubs" {
         infrastructure = {
           ari      = azurerm_eventhub_namespace.main.id
           endpoint = "sb://${azurerm_eventhub_namespace.main.name}.servicebus.windows.net/"
+          connection_str  = data.azurerm_eventhub_namespace_authorization_rule.listen.primary_connection_string
         }
         security = {
           iam = {
